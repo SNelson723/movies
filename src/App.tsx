@@ -5,11 +5,12 @@ function App() {
 
   return (
     <>
-      <div onClick={() => setCount((prev) => prev++)}>
+      <div className='rounded-md border border-white text-center p-2'>
         This is an application {count}
+        <button onClick={() => setCount((prev) => prev + 1)}>Click</button>
       </div>
     </>
   )
 }
 
-export default App
+export default App;
