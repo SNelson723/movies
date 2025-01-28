@@ -1,16 +1,17 @@
-import { useState } from 'react'
+import { Outlet } from "react-router";
+import SideBar from "./components/SideBar";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div className='rounded-md border border-white text-center p-2'>
-        This is an application {count}
-        <button onClick={() => setCount((prev) => prev + 1)}>Click</button>
+      <div className="w-screen h-screen bg-gradient-to-r from-indigo-600 to-emerald-500 flex">
+        <SideBar />
+        <div>
+          <Outlet />
+        </div>
       </div>
     </>
-  )
+  );
 }
 
 export default App;
