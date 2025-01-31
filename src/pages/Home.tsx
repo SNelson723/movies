@@ -28,7 +28,7 @@ const Home = () => {
       <div className="flex justify-center">
         <div>
           <div>
-            <p className="text-center py-2">Seach by Movie Title</p>
+            <p className="text-center py-2">Search by Movie Title</p>
           </div>
           <input
             className="py-1 rounded-l-md bg-indigo-200"
@@ -50,8 +50,8 @@ const Home = () => {
             key={`movie-${i}`}
             className="w-[45vw] text-center grid grid-cols-4 gap-3 bg-indigo-200 rounded-lg p-2"
           >
-            <div className="col-span-2 col-start-2 pl-2">
-              <img src={movie.Poster} />
+            <div className="col-span-2 col-start-2 pl-2 ">
+              <img width={150} src={movie.Poster} />
             </div>
 
             <div className="col-span-2">
