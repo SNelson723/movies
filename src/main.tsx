@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // pages
 import Home from './pages/Home.tsx';
+import Favorites from './pages/Favorites.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path='/' element={<App />}>
           {/* Nested Routes here */}
           <Route index element={<Home />} />
+          <Route path='favorites' element={<Favorites />} />
         </Route>
       </Routes>
     </BrowserRouter>

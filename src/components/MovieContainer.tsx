@@ -1,12 +1,17 @@
 import { MovieObj } from "../types";
+import axios from 'axios';
 
 interface MovieContainerProps {
   movie: MovieObj
 }
 
 const MovieContainer = ({ movie }: MovieContainerProps) => {
+  const addFavorite = async () => {
+    await axios.post('/addFavorite', movie)
+  }
   return (
     <div className="max-w-[35vw] bg-gray-600 bg-opacity-25 shadow-lg rounded-lg p-2">
+      <button onClick={addFavorite}>Add To Favorites</button>
       <div id="left" className="flex">
         <div className="pl-2 ">
           <img width={200} src={movie.Poster} />
