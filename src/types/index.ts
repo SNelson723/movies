@@ -37,4 +37,6 @@ export interface Movie {
   rated: string;
   title: string;
   plot: string;
+  image: string;
+  year: string;
 }

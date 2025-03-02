@@ -16,7 +16,7 @@ const Favorites = () => {
 
   return (
     <div>
-      <div className="grid grid-cols-3 gap-8 px-12 mt-12">
+      <div className="grid grid-cols-3 gap-6 px-12 mt-12">
         {movies.length &&
           movies.map((movie: Movie) => (
             <FavoritesCard key={`movie_${movie.id}`} movie={movie} />
