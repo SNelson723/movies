@@ -14,7 +14,7 @@ const db = new Sequelize({
   dialect: "mysql",
   username: USERNAME,
   password: PASSWORD,
-  database: 'mymovies',
+  database: 'movies',
 });
 
 db.authenticate()
@@ -50,6 +50,10 @@ const Favorites = db.define("favorite", {
     allowNull: false
   },
   releaseDate: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  plot: {
     type: DataTypes.STRING,
     allowNull: false
   }

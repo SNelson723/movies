@@ -7,10 +7,6 @@ const Home = () => {
   const [text, setText] = useState<string>("");
   const [movies, setMovies] = useState<MovieObj[]>([]);
 
-  useEffect(() => {
-    console.log(movies);
-  }, [movies]);
-
   const handleSearch = async (method: string) => {
     const apiKey: string = import.meta.env.VITE_API_KEY;
     const params = text.split(" ").join("+");
