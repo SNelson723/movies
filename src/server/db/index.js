@@ -14,7 +14,7 @@ const db = new Sequelize({
   dialect: "mysql",
   username: USERNAME,
   password: PASSWORD,
-  database: 'mymovies',
+  database: "movies",
 });
 
 db.authenticate()
@@ -31,11 +31,11 @@ const Favorites = db.define("favorite", {
   },
   title: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false,
   },
   genre: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false,
   },
   director: {
     type: DataTypes.STRING,
@@ -47,23 +47,37 @@ const Favorites = db.define("favorite", {
   },
   actors: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false,
   },
   releaseDate: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false,
+  },
+  plot: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  image: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  year: {
+    type: DataTypes.STRING,
+    alllowNull: false
   }
 });
 
-  db.sync()
-    .then(() => {
-      console.log("Database synchronized");
-    })
-    .catch((err) => {
-      console.error("Database synchronization error: ", err);
-    });
+// use force to reset the database if you make changes to the schemas
+// db.sync({ force: true})
+db.sync()
+  .then(() => {
+    console.log("Database synchronized");
+  })
+  .catch((err) => {
+    console.error("Database synchronization error: ", err);
+  });
 
-  export default {
-    sequelize: db,
-    Favorites
-  };
+export default {
+  sequelize: db,
+  Favorites,
+};

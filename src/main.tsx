@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // pages
 import Home from './pages/Home.tsx';
-import Favorites from './pages/Favorites.tsx';
+import Favorites from './pages/favorites/Favorites.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

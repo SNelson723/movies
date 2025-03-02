@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { MovieObj } from "../types";
 import MovieContainer from "../components/MovieContainer";
@@ -6,10 +6,6 @@ import MovieContainer from "../components/MovieContainer";
 const Home = () => {
   const [text, setText] = useState<string>("");
   const [movies, setMovies] = useState<MovieObj[]>([]);
-
-  useEffect(() => {
-    console.log(movies);
-  }, [movies]);
 
   const handleSearch = async (method: string) => {
     const apiKey: string = import.meta.env.VITE_API_KEY;

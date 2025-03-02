@@ -1,8 +1,8 @@
-import { MovieObj } from "../types";
+import { Movie} from "../types";
 import axios from 'axios';
 
 interface MovieContainerProps {
-  movie: MovieObj
+  movie: MovieObj | Movie
 }
 
 const MovieContainer = ({ movie }: MovieContainerProps) => {
