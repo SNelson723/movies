@@ -28,3 +28,12 @@ export interface MovieObj {
   imdbRating: string;
   imdbVotes: string;
 }
+
+export interface Movie {
+  id: number;
+  actors: string;
+  genre: string;
+  director: string;
+  rated: string;
+  title: string;
+}

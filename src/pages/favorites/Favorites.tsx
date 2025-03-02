@@ -14,7 +14,7 @@ const Favorites = () => {
  return (
   <div>
     <div>
-      Favorites
+      
     </div>
   </div>
  )
