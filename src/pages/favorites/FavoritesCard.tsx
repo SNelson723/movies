@@ -4,23 +4,18 @@ interface FavoriteProps {
   movie: Movie;
 }
 
-const FavoritesCard = ({ movie}: FavoriteProps) => {
+const FavoritesCard = ({ movie }: FavoriteProps) => {
   return (
     <div className="shadow-lg bg-slate-500 bg-opacity-50 rounded-lg text-slate-100">
       <div className="flex">
         <div>
-          Picture
+          <img src="" />
         </div>
-        <div>
-          Details
-        </div>
+        <div>Details</div>
       </div>
-      <div>
-        Plot
-      </div>
+      <div>{movie.plot}</div>
     </div>
-  )
+  );
 };
-
 
 export default FavoritesCard;

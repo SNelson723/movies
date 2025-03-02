@@ -38,7 +38,7 @@ app.get('/favorites', async (req, res) => {
 
 app.post('/addFavorite', async (req, res) => {
   try {
-    const { Title, Rated, Released, Genre, Director, Actors, Plot} = req.body;
+    const { Title, Rated, Released, Genre, Director, Actors, Plot, Poster, Year} = req.body;
     const newFavorite = await Favorites.create({
       title: Title,
       genre: Genre,
@@ -46,7 +46,9 @@ app.post('/addFavorite', async (req, res) => {
       rated: Rated,
       actors: Actors,
       releaseDate: Released,
-      plot: Plot
+      plot: Plot,
+      image: Poster,
+      year: Year
     });
     res.status(201).send(newFavorite)
   } catch (error) {
