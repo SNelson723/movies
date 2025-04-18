@@ -6,11 +6,9 @@ interface FavoriteProps {
 
 const FavoritesCard = ({ movie }: FavoriteProps) => {
   return (
-    <div className="shadow-lg bg-slate-500 bg-opacity-50 rounded-lg text-slate-100">
-      <div className="flex">
-        <div>
-          <img src={movie.image} height={200} width={150} />
-        </div>
+    <div className="shadow-lg bg-white bg-opacity-70 rounded-lg p-4 text-slate-800">
+      <div className="flex gap-2">
+        <img src={movie.image} height={200} width={150} />
         <div>
           <div>Title: {movie.title}</div>
           <div>Director: {movie.director}</div>
@@ -20,7 +18,7 @@ const FavoritesCard = ({ movie }: FavoriteProps) => {
           <div></div>
         </div>
       </div>
-      <div>{movie.plot}</div>
+      <div className="px-2">{movie.plot}</div>
     </div>
   );
 };

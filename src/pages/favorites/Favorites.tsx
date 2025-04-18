@@ -8,8 +8,12 @@ const Favorites = () => {
 
   useEffect(() => {
     const getFavorites = async () => {
-      const { data } = await axios.get("/favorites");
-      setMovies(data);
+      try {
+        const { data } = await axios.get("/favorites");
+        setMovies(data);
+      } catch (error: unknown) {
+        console.log(error);
+      }
     };
     getFavorites();
   }, []);
